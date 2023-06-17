@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px; /* Adjust the width as needed */
+  }
+  
+  .container > div {
+    flex: 0 0 20px; /* Adjust the width and height of grid elements as needed */
+    height: 20px;
+    background-color: gray; /* Optional styling */
+    border: 1px solid black; /* Optional styling */
+  }
+  
