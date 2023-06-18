@@ -1,13 +1,33 @@
-.container {
+
+
+/*body {
     display: flex;
-    flex-wrap: wrap;
-    width: 370px; /* Adjust the width as needed */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+
+  .main {
+    display: flex;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }*/
   
-  .container > div {
-    flex: 0 0 20px; /* Adjust the width and height of grid elements as needed */
-    height: 20px;
-    background-color: gray; /* Optional styling */
-    border: 1px solid black; /* Optional styling */
-  }
   
