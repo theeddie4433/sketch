@@ -5,22 +5,48 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--primary-dark);
     font-family: 'Roboto', sans-serif;
     background-color: #e2e2e2;
+    height: 100vh;
+    background: linear-gradient(90deg,#e52e71,#ff8a00);
+}
+
+.active{
+    filter: brightness(0.8);
+    transform: scale(0.7);
 }
 
 .title {
     text-align: center;
     font-size: 55px;
-    color:#2e94c3;
+    color:#ffffff;
+    text-shadow: 8px 10px 30px #555555;
+  }
+
+#colorPicker{
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    border-radius: 50px;
+    width:80px ;
+    height: 80px ;
+    padding: 0;
+    outline: none;
+}  
+
+#colorPicker::-webkit-color-swatch-wrapper {
+    border-radius: 50%;
+    padding: 0;
+  }
+  
+  #colorPicker::-webkit-color-swatch {
+    border-radius: 50%;
   }
 
 .buttons {
     display: flex;
     flex-direction: column;
-    height: 200px;
-    justify-content: space-around;
+    height: 500px;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -31,6 +57,7 @@ body {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
+    box-shadow: 6px 6px 15px #555555;
   }
 
   .main {
@@ -70,6 +97,7 @@ body {
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
+  box-shadow: 7px 7px 15px #555555;
 }
 
 .button-19:after {
@@ -94,11 +122,44 @@ body {
 
 .button-19:hover:not(:disabled) {
   filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 .button-19:disabled {
   cursor: auto;
 }
   
-  
+/*fondo de pantalla*/
+   
+  .background::before {
+    position: absolute;
+    content: "";
+    left: 70%;
+    top: 55%;
+    width: 450px;
+    height: 450px;
+    background: #17141d;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+  }
+  @keyframes sliderShape{
+    0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+  }
